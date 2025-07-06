@@ -15,7 +15,7 @@
     }
   },
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
@@ -24,7 +24,7 @@
       },
       "required": true
     },
-    "Content": {
+    "content": {
       "type": "text",
       "pluginOptions": {
         "i18n": {
@@ -32,14 +32,6 @@
         }
       },
       "required": true
-    },
-    "tags": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
     },
     "publishDate": {
       "type": "date",
@@ -50,7 +42,7 @@
       },
       "required": true
     },
-    "Archive": {
+    "archive": {
       "type": "boolean",
       "pluginOptions": {
         "i18n": {
@@ -58,6 +50,36 @@
         }
       },
       "default": false
+    },
+    "tags": {
+      "type": "json",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "summary": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "required": true
+    },
+    "imageUrl": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }
