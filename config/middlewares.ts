@@ -1,12 +1,20 @@
-export default [
-  'strapi::logger',
-  'strapi::errors',
-  'strapi::security',
-  'strapi::cors',
-  'strapi::poweredBy',
-  'strapi::query',
-  'strapi::body',
-  'strapi::session',
-  'strapi::favicon',
-  'strapi::public',
-];
+    module.exports = [
+      'strapi::errors',
+      'strapi::security',
+      {
+        name: 'strapi::cors',
+        config: {
+          enabled: true,
+          origin: ['http://localhost:4200', 'https://cluster2-airports-news-tau.vercel.app/'], // Replace with your Angular app's origin
+          headers: '*', // Allow all headers
+          methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Allow necessary HTTP methods
+        },
+      },
+      'strapi::poweredBy',
+      'strapi::logger',
+      'strapi::query',
+      'strapi::body',
+      'strapi::session',
+      'strapi::favicon',
+      'strapi::public',
+    ];
